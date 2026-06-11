@@ -1,22 +1,46 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------ */
+/* Stripe-inspired Design Tokens */
+/* ------------------------------------------------ */
+
 :root {
-  --background: #050816;
-  --surface: #0b1120;
+  /* Backgrounds */
+  --background: #ffffff;
+  --surface: #f6f9fc;
+  --surface-secondary: #eef2f7;
 
-  --primary: #3b82f6;
-  --secondary: #06b6d4;
+  /* Typography */
+  --text-primary: #0a2540;
+  --text-secondary: #425466;
+  --text-tertiary: #6b7c93;
 
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
+  /* Borders */
+  --border: #e6ebf1;
 
-  --border: rgba(255, 255, 255, 0.08);
+  /* Stripe Colors */
+  --primary: #635bff;
+
+  --purple: #7a73ff;
+  --pink: #ff80b5;
+  --orange: #ffb347;
+  --blue: #00d4ff;
+
+  /* Layout */
+  --container-width: 1280px;
+  --navbar-height: 72px;
 }
 
-* {
+/* ------------------------------------------------ */
+/* Reset */
+/* ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -26,6 +50,163 @@ html {
 body {
   background: var(--background);
   color: var(--text-primary);
+
+  min-height: 100vh;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------ */
+/* Elements */
+/* ------------------------------------------------ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* Reusable Utilities */
+/* ------------------------------------------------ */
+
+.surface {
+  background: var(--surface);
+}
+
+.surface-secondary {
+  background: var(--surface-secondary);
+}
+
+.border-subtle {
+  border: 1px solid var(--border);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+/* Stripe Primary Button */
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Secondary Button */
+
+.btn-secondary {
+  background: white;
+  border: 1px solid var(--border);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #fafbfc;
+}
+
+/* Gradient Text */
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--purple)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------------------ */
+/* Stripe Hero Gradient */
+/* ------------------------------------------------ */
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-gradient::before {
+  content: "";
+
+  position: absolute;
+
+  top: -300px;
+  right: -250px;
+
+  width: 900px;
+  height: 900px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 179, 71, 0.7) 0%,
+      rgba(255, 128, 181, 0.6) 35%,
+      rgba(122, 115, 255, 0.45) 60%,
+      transparent 75%
+    );
+
+  filter: blur(40px);
+
+  transform: rotate(-15deg);
+}
+
+@keyframes drift {
+  0% {
+    transform: rotate(28deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(28deg) translateY(-12px);
+  }
+
+  100% {
+    transform: rotate(28deg) translateY(0);
+  }
+}
+
+.ribbon-1 {
+  animation: drift 10s ease-in-out infinite;
+}
+
+.ribbon-2 {
+  animation: drift 12s ease-in-out infinite;
+}
+
+.ribbon-3 {
+  animation: drift 14s ease-in-out infinite;
 }
