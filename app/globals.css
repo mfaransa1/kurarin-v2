@@ -32,15 +32,17 @@
 }
 
 /* ------------------------------------------------ */
-/* Reset */
+/* Reset (must live in @layer base so Tailwind utilities win) */
 /* ------------------------------------------------ */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 html {
@@ -209,4 +211,46 @@ img {
 
 .ribbon-3 {
   animation: drift 14s ease-in-out infinite;
+}
+/* ------------------------------------------------ */
+/* Trust Bar Marquee */
+/* ------------------------------------------------ */
+
+.trust-marquee {
+  animation: trust-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.trust-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes trust-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------------------ */
+/* Footer Ambient Animation */
+/* ------------------------------------------------ */
+
+.footer-glow {
+  animation: footer-drift 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes footer-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-20px, 12px, 0) scale(1.04);
+  }
 }

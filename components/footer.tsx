@@ -1,37 +1,235 @@
 import Container from "./container";
 import Link from "next/link";
 
+const companyLinks = [
+  { name: "About", href: "/about" },
+  { name: "Our Work", href: "/work" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Contact", href: "/contact" },
+];
+
+const serviceLinks = [
+  { name: "Software Development", href: "/services" },
+  { name: "Business Automation", href: "/services" },
+  { name: "Cloud & Infrastructure", href: "/services" },
+  { name: "Digital Products", href: "/services" },
+];
+
 export default function Footer() {
   return (
-    <footer className="border-t border-[#E6EBF1]">
-      <Container>
-        <div className="py-20">
+    <footer className="relative w-full overflow-hidden bg-white">
+      {/* ================================================== */}
+      {/* FOOTER CTA */}
+      {/* ================================================== */}
+
+      <div className="border-t border-[#e6ebf1]">
+        <Container>
+          <div
+            className="
+              relative
+              overflow-hidden
+              py-24
+              md:py-32
+              lg:py-36
+            "
+          >
+            {/* ---------------------------------------------- */}
+            {/* Ambient Gradient */}
+            {/* ---------------------------------------------- */}
+
+            <div
+              className="
+                footer-glow
+                pointer-events-none
+                absolute
+                -right-32
+                -top-48
+                h-[520px]
+                w-[520px]
+                rounded-full
+                bg-[#635BFF]/[0.07]
+                blur-[110px]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-10
+                top-20
+                h-[360px]
+                w-[360px]
+                rounded-full
+                bg-[#FF80B5]/[0.045]
+                blur-[100px]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                bottom-[-220px]
+                left-[28%]
+                h-[420px]
+                w-[420px]
+                rounded-full
+                bg-[#FFB347]/[0.035]
+                blur-[110px]
+              "
+            />
+
+            {/* ---------------------------------------------- */}
+            {/* CTA Content */}
+            {/* ---------------------------------------------- */}
+
+            <div className="relative z-10 max-w-[900px]">
+              <div className="flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-[#635BFF]" />
+
+                <span
+                  className="
+                    text-[11px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.18em]
+                    text-[#6B7C93]
+                  "
+                >
+                  Let's build
+                </span>
+              </div>
+
+              <h2
+                className="
+                  mt-7
+                  max-w-[850px]
+                  text-[42px]
+                  font-semibold
+                  leading-[0.98]
+                  tracking-[-0.055em]
+                  text-[#0A2540]
+
+                  md:text-[60px]
+                  lg:text-[76px]
+                "
+              >
+                Your next idea
+                <br />
+                starts with a{" "}
+                <span className="text-[#635BFF]">conversation.</span>
+              </h2>
+
+              <div
+                className="
+                  mt-8
+                  flex
+                  flex-col
+                  gap-6
+
+                  md:flex-row
+                  md:items-center
+                  md:justify-between
+                "
+              >
+                <p
+                  className="
+                    max-w-[540px]
+                    text-[17px]
+                    leading-[1.7]
+                    text-[#6B7C93]
+                  "
+                >
+                  Tell us what you're trying to build, improve or automate.
+                  We'll help you turn the idea into something real.
+                </p>
+
+                <Link
+                  href="/contact"
+                  className="
+                    group
+                    inline-flex
+                    w-fit
+                    shrink-0
+                    items-center
+                    gap-3
+                    rounded-full
+                    bg-[#635BFF]
+                    px-6
+                    py-3.5
+                    text-[14px]
+                    font-semibold
+                    text-white
+
+                    transition-all
+                    duration-300
+
+                    hover:-translate-y-1
+                    hover:shadow-[0_15px_35px_rgba(99,91,255,0.22)]
+                  "
+                >
+                  Start a project
+
+                  <span
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+                    "
+                  >
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* ================================================== */}
+      {/* MAIN FOOTER */}
+      {/* ================================================== */}
+
+      <div className="border-t border-[#e6ebf1]">
+        <Container>
           <div
             className="
               grid
-              gap-12
+              gap-14
+              py-16
 
               md:grid-cols-2
-              lg:grid-cols-4
+              lg:grid-cols-[1.5fr_1fr_1fr_1fr]
+              lg:gap-12
+              lg:py-20
             "
           >
+            {/* ---------------------------------------------- */}
             {/* Brand */}
+            {/* ---------------------------------------------- */}
 
             <div>
               <Link
                 href="/"
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                "
+                className="group inline-flex items-center gap-3"
               >
                 <span
                   className="
-                    text-[32px]
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#635BFF]
+                    text-[21px]
                     font-bold
-                    tracking-tight
-                    text-[#635BFF]
+                    text-white
+
+                    transition-transform
+                    duration-300
+                    group-hover:rotate-3
                   "
                 >
                   K
@@ -39,8 +237,9 @@ export default function Footer() {
 
                 <span
                   className="
-                    text-lg
+                    text-[18px]
                     font-semibold
+                    tracking-[-0.02em]
                     text-[#0A2540]
                   "
                 >
@@ -50,142 +249,321 @@ export default function Footer() {
 
               <p
                 className="
-                  mt-4
-                  max-w-[260px]
-                  text-sm
-                  leading-relaxed
+                  mt-6
+                  max-w-[330px]
+                  text-[15px]
+                  leading-[1.7]
                   text-[#6B7C93]
                 "
               >
-                Building software, cloud systems and
-                digital infrastructure for modern
-                organizations.
+                Software, systems and digital infrastructure for
+                organizations building what comes next.
               </p>
-            </div>
 
-            {/* Company */}
+              {/* Location */}
 
-            <div>
-              <h4
-                className="
-                  text-sm
-                  font-semibold
-                  uppercase
-                  tracking-[0.15em]
-                  text-[#0A2540]
-                "
-              >
-                Company
-              </h4>
-
-              <div className="mt-6 flex flex-col gap-4">
-                <Link href="/about">About</Link>
-                <Link href="/work">Work</Link>
-                <Link href="/contact">Contact</Link>
-              </div>
-            </div>
-
-            {/* Services */}
-
-            <div>
-              <h4
-                className="
-                  text-sm
-                  font-semibold
-                  uppercase
-                  tracking-[0.15em]
-                  text-[#0A2540]
-                "
-              >
-                Services
-              </h4>
-
-              <div className="mt-6 flex flex-col gap-4">
-                <Link href="/services">
-                  Software Development
-                </Link>
-
-                <Link href="/services">
-                  Cloud Infrastructure
-                </Link>
-
-                <Link href="/services">
-                  Business Automation
-                </Link>
-
-                <Link href="/services">
-                  Digital Products
-                </Link>
-              </div>
-            </div>
-
-            {/* Contact */}
-
-            <div>
-              <h4
-                className="
-                  text-sm
-                  font-semibold
-                  uppercase
-                  tracking-[0.15em]
-                  text-[#0A2540]
-                "
-              >
-                Contact
-              </h4>
-
-              <div className="mt-6">
-                <p className="text-[#425466]">
-                  hello@kurarin.co.ke
+              <div className="mt-8">
+                <p
+                  className="
+                    text-[11px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.16em]
+                    text-[#6B7C93]
+                  "
+                >
+                  Based in
                 </p>
 
-                <p className="mt-2 text-[#425466]">
+                <p
+                  className="
+                    mt-2
+                    text-[14px]
+                    font-medium
+                    text-[#0A2540]
+                  "
+                >
                   Nairobi, Kenya
                 </p>
               </div>
             </div>
+
+            {/* ---------------------------------------------- */}
+            {/* Company */}
+            {/* ---------------------------------------------- */}
+
+            <div>
+              <h3
+                className="
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.16em]
+                  text-[#6B7C93]
+                "
+              >
+                Company
+              </h3>
+
+              <nav className="mt-6 flex flex-col gap-4">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="
+                      group
+                      flex
+                      w-fit
+                      items-center
+                      gap-2
+                      text-[14px]
+                      text-[#425466]
+                      transition-colors
+                      duration-200
+                      hover:text-[#635BFF]
+                    "
+                  >
+                    {link.name}
+
+                    <span
+                      className="
+                        opacity-0
+                        transition-all
+                        duration-200
+                        group-hover:translate-x-1
+                        group-hover:opacity-100
+                      "
+                    >
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* ---------------------------------------------- */}
+            {/* Capabilities */}
+            {/* ---------------------------------------------- */}
+
+            <div>
+              <h3
+                className="
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.16em]
+                  text-[#6B7C93]
+                "
+              >
+                Capabilities
+              </h3>
+
+              <nav className="mt-6 flex flex-col gap-4">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="
+                      group
+                      flex
+                      w-fit
+                      items-center
+                      gap-2
+                      text-[14px]
+                      text-[#425466]
+                      transition-colors
+                      duration-200
+                      hover:text-[#635BFF]
+                    "
+                  >
+                    {link.name}
+
+                    <span
+                      className="
+                        opacity-0
+                        transition-all
+                        duration-200
+                        group-hover:translate-x-1
+                        group-hover:opacity-100
+                      "
+                    >
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* ---------------------------------------------- */}
+            {/* Contact */}
+            {/* ---------------------------------------------- */}
+
+            <div>
+              <h3
+                className="
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.16em]
+                  text-[#6B7C93]
+                "
+              >
+                Contact
+              </h3>
+
+              <div className="mt-6 flex flex-col gap-4">
+                <a
+                  href="mailto:info@kurarinsolutions.co.ke"
+                  className="
+                    w-fit
+                    text-[14px]
+                    text-[#425466]
+                    transition-colors
+                    duration-200
+                    hover:text-[#635BFF]
+                  "
+                >
+                  info@kurarinsolutions.co.ke
+                </a>
+
+                <Link
+                  href="/contact"
+                  className="
+                    group
+                    flex
+                    w-fit
+                    items-center
+                    gap-2
+                    text-[14px]
+                    text-[#425466]
+                    transition-colors
+                    duration-200
+                    hover:text-[#635BFF]
+                  "
+                >
+                  Contact our team
+
+                  <span
+                    className="
+                      transition-transform
+                      duration-200
+                      group-hover:translate-x-1
+                    "
+                  >
+                    →
+                  </span>
+                </Link>
+
+                {/* Social */}
+
+                <div className="mt-4 flex items-center gap-3">
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#e6ebf1]
+                      text-[12px]
+                      font-semibold
+                      text-[#425466]
+                      transition-all
+                      duration-200
+                      hover:border-[#635BFF]
+                      hover:bg-[#635BFF]
+                      hover:text-white
+                    "
+                  >
+                    in
+                  </a>
+
+                  <a
+                    href="#"
+                    aria-label="GitHub"
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#e6ebf1]
+                      text-[12px]
+                      font-semibold
+                      text-[#425466]
+                      transition-all
+                      duration-200
+                      hover:border-[#635BFF]
+                      hover:bg-[#635BFF]
+                      hover:text-white
+                    "
+                  >
+                    GH
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
+        </Container>
+      </div>
 
-          {/* Bottom */}
+      {/* ================================================== */}
+      {/* BOTTOM BAR */}
+      {/* ================================================== */}
 
+      <div className="border-t border-[#e6ebf1]">
+        <Container>
           <div
             className="
-              mt-20
               flex
               flex-col
               gap-4
-              border-t
-              border-[#E6EBF1]
-              pt-8
+              py-7
 
               md:flex-row
               md:items-center
               md:justify-between
             "
           >
-            <p className="text-sm text-[#6B7C93]">
-              © 2026 Kurarin Solutions.
-              All rights reserved.
+            <p className="text-[12px] text-[#6B7C93]">
+              © {new Date().getFullYear()} Kurarin Solutions. All rights
+              reserved.
             </p>
 
-            <div className="flex gap-6">
+            <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-sm text-[#6B7C93]"
+                className="
+                  text-[12px]
+                  text-[#6B7C93]
+                  transition-colors
+                  hover:text-[#635BFF]
+                "
               >
                 Privacy
               </Link>
 
               <Link
                 href="/terms"
-                className="text-sm text-[#6B7C93]"
+                className="
+                  text-[12px]
+                  text-[#6B7C93]
+                  transition-colors
+                  hover:text-[#635BFF]
+                "
               >
                 Terms
               </Link>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </footer>
   );
 }
