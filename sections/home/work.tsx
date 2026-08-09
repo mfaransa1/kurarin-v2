@@ -1,65 +1,72 @@
 import Container from "@/components/container";
+import Link from "next/link";
 
 const projects = [
   {
-    title: "School Management Platform",
-    category: "Education",
-    description:
-      "A complete digital ecosystem for admissions, finance, examinations and communication.",
-  },
-  {
-    title: "Business Automation System",
-    category: "Automation",
-    description:
-      "A workflow automation platform designed to reduce operational overhead and improve efficiency.",
-  },
-  {
-    title: "Enterprise Client Portal",
-    category: "Enterprise",
-    description:
-      "A secure customer portal designed for self-service, reporting and account management.",
-  },
-  {
     title: "BoB Van Transfers",
-    category: "Transportation • Digital Platform",
+    category: "Transportation · Digital Platform",
     description:
       "A modern digital platform for airport transfers, hotel transportation and chauffeured travel services.",
+    href: "/work/bob-van-transfers",
   },
   {
     title: "SmartFix Interiors",
-    category: "Interior Design • Digital Presence",
+    category: "Interior Design · Digital Presence",
     description:
       "A digital experience designed to showcase interior solutions, communicate services and connect the business with customers.",
+    href: "/work/smartfix-interiors",
+  },
+  {
+    title: "WAA SACCO",
+    category: "Business · Financial System",
+    description:
+      "A digital SACCO management system designed to support chama operations, member management and financial workflows.",
+    href: "/work/waa-sacco",
+  },
+  {
+    title: "Jobugi LMS",
+    category: "Education · Learning Platform",
+    description:
+      "A learning management system developed for a private school to support digital learning, content management and student engagement.",
+    href: "/work/jobugi-lms",
   },
   {
     title: "Project Juliana",
-    category: "Digital Product",
+    category: "AI · Mental Wellness",
     description:
-      "Project description coming soon.",
+      "An AI-powered mental wellness companion combining conversational support, emotion awareness, journaling, self-help tools and crisis-aware guidance.",
+    href: "/work/project-juliana",
   },
 ];
 
 export default function Work() {
   return (
-    <section className="w-full bg-[#f6f9fc] py-28 lg:py-36">
+    <section className="relative overflow-hidden bg-white py-28 md:py-36 lg:py-44">
       <Container>
-        {/* Section Header */}
-        <div className="max-w-[760px]">
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-[#635BFF]" />
+        {/* ================================================== */}
+        {/* SECTION HEADER */}
+        {/* ================================================== */}
 
-            <span className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#6b7c93]">
-              Selected Work
-            </span>
-          </div>
+        <div className="max-w-[760px]">
+          <span
+            className="
+              text-[11px]
+              font-semibold
+              uppercase
+              tracking-[0.18em]
+              text-[#6B7C93]
+            "
+          >
+            Selected work
+          </span>
 
           <h2
             className="
               mt-6
-              text-[40px]
+              text-[42px]
               font-semibold
-              leading-[1]
-              tracking-[-0.045em]
+              leading-[0.98]
+              tracking-[-0.055em]
               text-[#0A2540]
 
               md:text-[56px]
@@ -72,51 +79,70 @@ export default function Work() {
             className="
               mt-6
               max-w-[620px]
-              text-lg
+              text-[17px]
               leading-[1.7]
               text-[#425466]
+
+              md:text-[18px]
             "
           >
-            We partner with organizations to build software systems and
-            digital experiences that improve operations, customer
-            experiences and business growth.
+            From digital platforms and business systems to education and
+            emerging AI products, we build technology around real problems,
+            real organizations and real people.
           </p>
         </div>
 
-        {/* Projects */}
-        <div className="mt-20 space-y-5">
+        {/* ================================================== */}
+        {/* PROJECTS */}
+        {/* ================================================== */}
+
+        <div className="mt-20 border-t border-[#E6EBF1]">
           {projects.map((project, index) => (
-            <article
+            <Link
               key={project.title}
+              href={project.href}
               className="
                 group
-                rounded-3xl
-                border
+                block
+                border-b
                 border-[#E6EBF1]
-                bg-white
-                p-8
+                py-10
                 transition-all
                 duration-300
 
-                hover:-translate-y-[2px]
-                hover:border-[#d9dff0]
-                hover:shadow-[0_20px_60px_rgba(10,37,64,0.06)]
+                md:py-12
+                lg:py-14
 
-                md:p-10
-                lg:p-12
+                hover:bg-[#FAFBFC]
               "
             >
-              <div className="grid gap-8 md:grid-cols-[80px_0.9fr_1.1fr] md:items-start md:gap-10">
-                {/* Project Number */}
+              <div
+                className="
+                  grid
+                  gap-8
+
+                  md:grid-cols-[70px_0.9fr_1.1fr_40px]
+                  md:items-start
+                  md:gap-8
+
+                  lg:grid-cols-[80px_0.9fr_1.1fr_48px]
+                  lg:gap-10
+                "
+              >
+                {/* ================================================== */}
+                {/* NUMBER */}
+                {/* ================================================== */}
+
                 <div>
                   <span
                     className="
-                      text-[13px]
+                      text-[12px]
                       font-medium
                       tracking-[0.04em]
-                      text-[#6b7c93]
+                      text-[#6B7C93]
                       transition-colors
                       duration-300
+
                       group-hover:text-[#635BFF]
                     "
                   >
@@ -124,11 +150,14 @@ export default function Work() {
                   </span>
                 </div>
 
-                {/* Project Name */}
+                {/* ================================================== */}
+                {/* PROJECT NAME */}
+                {/* ================================================== */}
+
                 <div>
                   <p
                     className="
-                      text-[11px]
+                      text-[10px]
                       font-semibold
                       uppercase
                       tracking-[0.16em]
@@ -141,86 +170,135 @@ export default function Work() {
                   <h3
                     className="
                       mt-3
-                      text-2xl
+                      text-[27px]
                       font-semibold
-                      leading-tight
-                      tracking-[-0.03em]
+                      leading-[1.05]
+                      tracking-[-0.04em]
                       text-[#0A2540]
+                      transition-transform
+                      duration-300
 
-                      md:text-3xl
+                      md:text-[32px]
+
+                      group-hover:translate-x-1
                     "
                   >
                     {project.title}
                   </h3>
                 </div>
 
-                {/* Description */}
+                {/* ================================================== */}
+                {/* DESCRIPTION */}
+                {/* ================================================== */}
+
                 <div>
                   <p
                     className="
                       max-w-[560px]
-                      text-[16px]
+                      text-[15px]
                       leading-[1.7]
-                      text-[#425466]
+                      text-[#6B7C93]
+
+                      md:text-[16px]
                     "
                   >
                     {project.description}
                   </p>
 
-                  <button
-                    type="button"
+                  <span
                     className="
-                      mt-6
+                      mt-5
                       inline-flex
                       items-center
                       gap-2
-                      text-sm
+                      text-[12px]
                       font-semibold
                       text-[#0A2540]
                       transition-colors
-                      duration-200
+                      duration-300
+
                       group-hover:text-[#635BFF]
                     "
                   >
-                    View case study
+                    View project
+
                     <span
                       className="
                         transition-transform
-                        duration-200
+                        duration-300
                         group-hover:translate-x-1
                       "
                     >
                       →
                     </span>
-                  </button>
+                  </span>
+                </div>
+
+                {/* ================================================== */}
+                {/* ARROW */}
+                {/* ================================================== */}
+
+                <div
+                  className="
+                    hidden
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#E6EBF1]
+                    text-[#425466]
+                    transition-all
+                    duration-300
+
+                    md:flex
+
+                    group-hover:border-[#635BFF]
+                    group-hover:bg-[#635BFF]
+                    group-hover:text-white
+                  "
+                >
+                  <span className="text-[15px]">↗</span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
-        {/* All Work */}
+        {/* ================================================== */}
+        {/* ALL WORK */}
+        {/* ================================================== */}
+
         <div className="mt-10">
-          <a
+          <Link
             href="/work"
             className="
               group
               inline-flex
               items-center
-              gap-2
-              text-sm
-              font-medium
+              gap-3
+              text-[13px]
+              font-semibold
               text-[#0A2540]
+              transition-colors
+              duration-300
+
+              hover:text-[#635BFF]
             "
           >
-            <span className="border-b border-[#0A2540] pb-0.5 transition-colors duration-200 group-hover:border-[#635BFF] group-hover:text-[#635BFF]">
-              View all work
-            </span>
+            <span>View all work</span>
 
-            <span className="transition-transform duration-200 group-hover:translate-x-1">
+            <span
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            >
               →
             </span>
-          </a>
+          </Link>
         </div>
       </Container>
     </section>

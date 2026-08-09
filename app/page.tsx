@@ -4,21 +4,32 @@ import Services from "@/sections/home/services";
 import Work from "@/sections/home/work";
 import WhyKurarin from "@/sections/home/why-kurarin";
 import CTA from "@/sections/home/CTA";
+import Reveal from "@/components/reveal";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative overflow-hidden bg-white">
       <Hero />
 
-      <TrustBar />
+      <Reveal y={30}>
+        <TrustBar />
+      </Reveal>
 
-      <Services />
+      <Reveal y={40}>
+        <Services />
+      </Reveal>
 
-      <Work />
+      <Reveal y={40}>
+        <Work />
+      </Reveal>
 
-      <WhyKurarin />
+      <Reveal y={40}>
+        <WhyKurarin />
+      </Reveal>
 
-      <CTA />
+      <Reveal y={40}>
+        <CTA />
+      </Reveal>
     </main>
   );
 }

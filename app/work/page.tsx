@@ -4,58 +4,58 @@ import Link from "next/link";
 const projects = [
   {
     number: "01",
-    client: "BoB Van Transfers",
-    title: "A better digital experience for modern transport.",
+    client: "Project Juliana",
+    title: "Building technology with humanity in mind.",
     description:
-      "A digital platform for a Nairobi-based transport company, designed to make airport transfers, hotel transfers and chauffeur services easier to discover and book.",
-    category: "Transport · Digital Platform",
-    status: "Live",
-    href: "#",
+      "An AI-powered mental wellness platform combining conversational support, emotion and crisis awareness, private journaling, mindfulness and self-assessment.",
+    category: "AI · Mental Wellness · Product",
+    status: "In development",
+    href: "/work/project-juliana",
     featured: true,
   },
   {
     number: "02",
-    client: "SmartFix Interior",
-    title: "Bringing an interior business into the digital age.",
+    client: "BoB Van Transfers",
+    title: "A better digital experience for modern transport.",
     description:
-      "A modern digital presence designed to communicate SmartFix Interior's work, services and brand while creating a stronger experience for prospective customers.",
-    category: "Interior Design · Digital Experience",
+      "A modern digital platform for a Nairobi-based transport company, helping customers discover airport transfers, hotel transfers and chauffeured transportation services.",
+    category: "Transport · Web Platform",
     status: "Live",
-    href: "#",
+    href: "/work/bob-van-transfers",
     featured: true,
   },
   {
     number: "03",
-    client: "Project Juliana",
-    title: "A more human way to access mental-health support.",
+    client: "SmartFix Interior",
+    title: "A digital presence built around the work.",
     description:
-      "An AI-powered conversational product we're developing to create a more accessible and private first point of interaction for people seeking mental-health support.",
-    category: "AI · Conversational Technology",
-    status: "In development",
-    href: "#",
+      "A visually focused website designed to showcase SmartFix Interior's services, work and brand while creating a stronger digital experience for prospective customers.",
+    category: "Interior Design · Web",
+    status: "Live",
+    href: "/work/smartfix-interior",
     featured: true,
   },
   {
     number: "04",
-    client: "School Management Platform",
-    title: "One connected system for school operations.",
+    client: "WAA SACCO",
+    title: "Bringing chama financial operations into one system.",
     description:
-      "A software platform concept bringing admissions, finance, examinations, communication and day-to-day school operations into one connected environment.",
-    category: "Education · Software",
-    status: "Development",
-    href: "#",
-    featured: false,
+      "A custom software platform designed to centralize member management, contributions, financial records and administrative workflows for a Nairobi-based SACCO.",
+    category: "FinTech · Business Systems",
+    status: "Completed",
+    href: "/work/waa-sacco",
+    featured: true,
   },
   {
     number: "05",
-    client: "Business Automation System",
-    title: "Turning repetitive work into connected workflows.",
+    client: "Jobugi LMS",
+    title: "A connected learning environment for a private school.",
     description:
-      "An automation system designed to reduce manual operational processes, connect business data and help teams spend more time on meaningful work.",
-    category: "Automation · Business Systems",
-    status: "Development",
-    href: "#",
-    featured: false,
+      "A learning management system built to bring educational content, student access, teacher workflows and academic activities into a centralized digital environment.",
+    category: "Education · LMS",
+    status: "Completed",
+    href: "/work/jobugi-lms",
+    featured: true,
   },
 ];
 
@@ -67,8 +67,6 @@ export default function WorkPage() {
       {/* ================================================== */}
 
       <section className="relative overflow-hidden pt-16 md:pt-24 lg:pt-28">
-        {/* Ambient glow */}
-
         <div
           className="
             pointer-events-none
@@ -98,9 +96,7 @@ export default function WorkPage() {
         />
 
         <Container>
-          <div className="relative z-10 max-w-[900px]">
-            {/* Eyebrow */}
-
+          <div className="relative z-10 max-w-[920px]">
             <div className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-[#635BFF]" />
 
@@ -117,8 +113,6 @@ export default function WorkPage() {
               </span>
             </div>
 
-            {/* Heading */}
-
             <h1
               className="
                 mt-7
@@ -133,17 +127,15 @@ export default function WorkPage() {
                 lg:text-[88px]
               "
             >
-              Software built
+              Technology built
               <br />
               for the real world.
             </h1>
 
-            {/* Description */}
-
             <p
               className="
                 mt-8
-                max-w-[680px]
+                max-w-[700px]
                 text-[18px]
                 leading-[1.7]
                 text-[#6B7C93]
@@ -151,220 +143,214 @@ export default function WorkPage() {
                 md:text-[20px]
               "
             >
-              From business platforms and automation systems to emerging
-              digital products, we build technology around real problems,
-              real people and real organizations.
+              We design and build software, digital platforms and business
+              systems around real problems, real organizations and the people
+              who use them.
             </p>
           </div>
         </Container>
       </section>
 
       {/* ================================================== */}
-      {/* FEATURED WORK */}
+      {/* PROJECTS */}
       {/* ================================================== */}
 
       <section className="relative py-28 md:py-36 lg:py-44">
         <Container>
-          <div className="mb-16 flex items-end justify-between gap-8">
-            <div>
-              <span
-                className="
-                  text-[11px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.18em]
-                  text-[#6B7C93]
-                "
-              >
-                Projects
-              </span>
+          <div className="mb-16">
+            <span
+              className="
+                text-[11px]
+                font-semibold
+                uppercase
+                tracking-[0.18em]
+                text-[#6B7C93]
+              "
+            >
+              Our projects
+            </span>
 
-              <h2
-                className="
-                  mt-5
-                  text-[38px]
-                  font-semibold
-                  leading-[1]
-                  tracking-[-0.05em]
-                  text-[#0A2540]
+            <h2
+              className="
+                mt-5
+                text-[38px]
+                font-semibold
+                leading-[1]
+                tracking-[-0.05em]
+                text-[#0A2540]
 
-                  md:text-[52px]
-                "
-              >
-                Selected work.
-              </h2>
-            </div>
+                md:text-[52px]
+              "
+            >
+              Work that solves
+              <br />
+              real problems.
+            </h2>
           </div>
 
-          {/* Project list */}
-
           <div className="border-t border-[#E6EBF1]">
-            {projects
-              .filter((project) => project.featured)
-              .map((project) => (
-                <Link
-                  key={project.number}
-                  href={project.href}
-                  className="
-                    group
-                    block
-                    border-b
-                    border-[#E6EBF1]
-                    py-12
-                    transition-all
-                    duration-300
+            {projects.map((project) => (
+              <Link
+                key={project.number}
+                href={project.href}
+                className="
+                  group
+                  block
+                  border-b
+                  border-[#E6EBF1]
+                  py-12
+                  transition-all
+                  duration-300
 
-                    md:py-16
-                    lg:py-20
+                  md:py-16
+                  lg:py-20
+                "
+              >
+                <div
+                  className="
+                    grid
+                    gap-10
+
+                    lg:grid-cols-[80px_1fr_1fr_40px]
+                    lg:items-start
+                    lg:gap-12
                   "
                 >
-                  <div
-                    className="
-                      grid
-                      gap-10
+                  {/* Number */}
 
-                      lg:grid-cols-[80px_1fr_1fr_40px]
-                      lg:items-start
-                      lg:gap-12
+                  <span
+                    className="
+                      text-[12px]
+                      font-medium
+                      tracking-[0.05em]
+                      text-[#6B7C93]
+                      transition-colors
+                      duration-300
+                      group-hover:text-[#635BFF]
                     "
                   >
-                    {/* Number */}
+                    {project.number}
+                  </span>
 
-                    <span
-                      className="
-                        text-[12px]
-                        font-medium
-                        tracking-[0.05em]
-                        text-[#6B7C93]
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#635BFF]
-                      "
-                    >
-                      {project.number}
-                    </span>
+                  {/* Client / Title */}
 
-                    {/* Client / Title */}
-
-                    <div>
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span
-                          className="
-                            text-[12px]
-                            font-semibold
-                            uppercase
-                            tracking-[0.1em]
-                            text-[#635BFF]
-                          "
-                        >
-                          {project.client}
-                        </span>
-
-                        <span
-                          className="
-                            rounded-full
-                            bg-[#F6F9FC]
-                            px-3
-                            py-1
-                            text-[10px]
-                            font-medium
-                            text-[#6B7C93]
-                          "
-                        >
-                          {project.status}
-                        </span>
-                      </div>
-
-                      <h3
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span
                         className="
-                          mt-4
-                          max-w-[560px]
-                          text-[30px]
+                          text-[12px]
                           font-semibold
-                          leading-[1.05]
-                          tracking-[-0.04em]
-                          text-[#0A2540]
-                          transition-transform
-                          duration-300
-
-                          md:text-[40px]
-
-                          group-hover:translate-x-1
-                        "
-                      >
-                        {project.title}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-
-                    <div>
-                      <p
-                        className="
-                          max-w-[500px]
-                          text-[16px]
-                          leading-[1.7]
-                          text-[#6B7C93]
-
-                          md:text-[17px]
-                        "
-                      >
-                        {project.description}
-                      </p>
-
-                      <p
-                        className="
-                          mt-6
-                          text-[11px]
-                          font-medium
                           uppercase
                           tracking-[0.1em]
+                          text-[#635BFF]
+                        "
+                      >
+                        {project.client}
+                      </span>
+
+                      <span
+                        className="
+                          rounded-full
+                          bg-[#F6F9FC]
+                          px-3
+                          py-1
+                          text-[10px]
+                          font-medium
                           text-[#6B7C93]
                         "
                       >
-                        {project.category}
-                      </p>
+                        {project.status}
+                      </span>
                     </div>
 
-                    {/* Arrow */}
-
-                    <div
+                    <h3
                       className="
-                        hidden
-                        h-10
-                        w-10
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-[#E6EBF1]
-                        text-[#425466]
-                        transition-all
+                        mt-4
+                        max-w-[560px]
+                        text-[30px]
+                        font-semibold
+                        leading-[1.05]
+                        tracking-[-0.04em]
+                        text-[#0A2540]
+                        transition-transform
                         duration-300
 
-                        lg:flex
+                        md:text-[40px]
 
-                        group-hover:border-[#635BFF]
-                        group-hover:bg-[#635BFF]
-                        group-hover:text-white
+                        group-hover:translate-x-1
                       "
                     >
-                      →
-                    </div>
+                      {project.title}
+                    </h3>
                   </div>
-                </Link>
-              ))}
+
+                  {/* Description */}
+
+                  <div>
+                    <p
+                      className="
+                        max-w-[500px]
+                        text-[16px]
+                        leading-[1.7]
+                        text-[#6B7C93]
+
+                        md:text-[17px]
+                      "
+                    >
+                      {project.description}
+                    </p>
+
+                    <p
+                      className="
+                        mt-6
+                        text-[11px]
+                        font-medium
+                        uppercase
+                        tracking-[0.1em]
+                        text-[#6B7C93]
+                      "
+                    >
+                      {project.category}
+                    </p>
+                  </div>
+
+                  {/* Arrow */}
+
+                  <div
+                    className="
+                      hidden
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#E6EBF1]
+                      text-[#425466]
+                      transition-all
+                      duration-300
+
+                      lg:flex
+
+                      group-hover:border-[#635BFF]
+                      group-hover:bg-[#635BFF]
+                      group-hover:text-white
+                    "
+                  >
+                    →
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* ================================================== */}
-      {/* JULIANA FEATURE */}
+      {/* PROJECT JULIANA FEATURE */}
       {/* ================================================== */}
 
       <section className="relative overflow-hidden bg-[#F6F9FC] py-28 md:py-36">
-        {/* Purple ambient glow */}
-
         <div
           className="
             pointer-events-none
@@ -442,10 +428,9 @@ export default function WorkPage() {
                   text-[#6B7C93]
                 "
               >
-                Project Juliana is an AI-powered mental-health chatbot we're
-                currently developing. The goal is to create a conversational
-                experience that makes it easier for people to begin seeking
-                support in a private, accessible and approachable way.
+                Project Juliana is a digital mental wellness companion
+                designed to make basic mental health support more accessible,
+                private and locally relevant.
               </p>
 
               <p
@@ -457,10 +442,32 @@ export default function WorkPage() {
                   text-[#6B7C93]
                 "
               >
-                It's an ongoing product exploration at the intersection of
-                artificial intelligence, conversational design and human
-                wellbeing.
+                The platform combines an AI mental health companion,
+                emotion and crisis awareness, private journaling, mindfulness
+                and self-assessment tools. We're also exploring how Kenyan
+                expressions, Sheng and local context can make the experience
+                more natural and accessible.
               </p>
+
+              <Link
+                href="/work/project-juliana"
+                className="
+                  group
+                  mt-8
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-[#635BFF]
+                "
+              >
+                Explore Project Juliana
+
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
             </div>
 
             {/* Visual */}
@@ -478,8 +485,6 @@ export default function WorkPage() {
                   shadow-[0_30px_100px_rgba(10,37,64,0.06)]
                 "
               >
-                {/* Ambient gradient */}
-
                 <div
                   className="
                     absolute
@@ -505,8 +510,6 @@ export default function WorkPage() {
                     blur-[80px]
                   "
                 />
-
-                {/* Chat interface concept */}
 
                 <div className="absolute inset-8 flex flex-col justify-between md:inset-12">
                   <div>
@@ -534,7 +537,7 @@ export default function WorkPage() {
                         </p>
 
                         <p className="text-[11px] text-[#6B7C93]">
-                          Conversational support
+                          Mental wellness companion
                         </p>
                       </div>
                     </div>
@@ -587,127 +590,74 @@ export default function WorkPage() {
       </section>
 
       {/* ================================================== */}
-      {/* MORE WORK */}
+      {/* WHAT THESE PROJECTS REPRESENT */}
       {/* ================================================== */}
 
       <section className="py-28 md:py-36">
         <Container>
-          <div className="max-w-[650px]">
-            <span
-              className="
-                text-[11px]
-                font-semibold
-                uppercase
-                tracking-[0.18em]
-                text-[#6B7C93]
-              "
-            >
-              More work
-            </span>
+          <div className="grid gap-16 lg:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <span
+                className="
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#6B7C93]
+                "
+              >
+                What we build
+              </span>
 
-            <h2
-              className="
-                mt-5
-                text-[40px]
-                font-semibold
-                leading-[1]
-                tracking-[-0.05em]
-                text-[#0A2540]
+              <h2
+                className="
+                  mt-5
+                  text-[40px]
+                  font-semibold
+                  leading-[1]
+                  tracking-[-0.05em]
+                  text-[#0A2540]
 
-                md:text-[54px]
-              "
-            >
-              More systems.
-              <br />
-              More possibilities.
-            </h2>
-          </div>
+                  md:text-[54px]
+                "
+              >
+                Different problems.
+                <br />
+                One approach.
+              </h2>
+            </div>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {projects
-              .filter((project) => !project.featured)
-              .map((project) => (
-                <Link
-                  key={project.number}
-                  href={project.href}
-                  className="
-                    group
-                    rounded-3xl
-                    border
-                    border-[#E6EBF1]
-                    bg-white
-                    p-8
-                    transition-all
-                    duration-300
+            <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2">
+              <Capability
+                title="Digital products"
+                description="From early-stage ideas to working platforms, we turn concepts into useful digital products."
+              />
 
-                    md:p-10
+              <Capability
+                title="Business systems"
+                description="We build software around the workflows that keep organizations running."
+              />
 
-                    hover:-translate-y-1
-                    hover:border-[#D8DCE5]
-                    hover:shadow-[0_20px_60px_rgba(10,37,64,0.05)]
-                  "
-                >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="
-                        text-[12px]
-                        font-medium
-                        text-[#6B7C93]
-                      "
-                    >
-                      {project.number}
-                    </span>
+              <Capability
+                title="AI & intelligent systems"
+                description="We explore practical applications of AI where it can create meaningful value."
+              />
 
-                    <span
-                      className="
-                        text-[#6B7C93]
-                        transition-transform
-                        duration-300
-                        group-hover:translate-x-1
-                      "
-                    >
-                      →
-                    </span>
-                  </div>
+              <Capability
+                title="Web experiences"
+                description="High-quality websites and digital experiences designed around users and business goals."
+              />
 
-                  <p
-                    className="
-                      mt-12
-                      text-[11px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.12em]
-                      text-[#635BFF]
-                    "
-                  >
-                    {project.category}
-                  </p>
+              <Capability
+                title="Education technology"
+                description="Learning platforms and school systems that connect students, educators and institutions."
+              />
 
-                  <h3
-                    className="
-                      mt-4
-                      text-[27px]
-                      font-semibold
-                      leading-[1.05]
-                      tracking-[-0.035em]
-                      text-[#0A2540]
-                    "
-                  >
-                    {project.client}
-                  </h3>
-
-                  <p
-                    className="
-                      mt-4
-                      text-[15px]
-                      leading-[1.7]
-                      text-[#6B7C93]
-                    "
-                  >
-                    {project.description}
-                  </p>
-                </Link>
-              ))}
+              <Capability
+                title="Financial technology"
+                description="Purpose-built systems for managing members, financial activity and organizational operations."
+              />
+            </div>
           </div>
         </Container>
       </section>
@@ -806,5 +756,45 @@ export default function WorkPage() {
         </Container>
       </section>
     </main>
+  );
+}
+
+/* ================================================== */
+/* CAPABILITY */
+/* ================================================== */
+
+function Capability({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div>
+      <div className="mb-4 h-px w-8 bg-[#635BFF]" />
+
+      <h3
+        className="
+          text-xl
+          font-semibold
+          tracking-tight
+          text-[#0A2540]
+        "
+      >
+        {title}
+      </h3>
+
+      <p
+        className="
+          mt-3
+          text-[15px]
+          leading-[1.7]
+          text-[#6B7C93]
+        "
+      >
+        {description}
+      </p>
+    </div>
   );
 }
