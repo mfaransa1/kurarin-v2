@@ -7,6 +7,7 @@ interface RevealProps {
   className?: string;
   delay?: number;
   direction?: "up" | "left" | "right" | "none";
+  y?: number;
 }
 
 export default function Reveal({
@@ -14,8 +15,9 @@ export default function Reveal({
   className = "",
   delay = 0,
   direction = "up",
+  y = 32,
 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -41,25 +43,30 @@ export default function Reveal({
     return () => observer.disconnect();
   }, []);
 
-  const transforms = {
-    up: "translate-y-8",
-    left: "-translate-x-8",
-    right: "translate-x-8",
-    none: "",
+  const directionTransform = {
+    up: `translateY(${y}px)`,
+    left: "translateX(-32px)",
+    right: "translateX(32px)",
+    none: "none",
   };
 
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{
+        transitionDelay: `${delay}ms`,
+        transform: visible
+          ? "translate3d(0, 0, 0)"
+          : directionTransform[direction],
+      }}
       className={`
         transition-all
         duration-700
         ease-[cubic-bezier(0.22,1,0.36,1)]
         ${
           visible
-            ? "translate-x-0 translate-y-0 opacity-100"
-            : `${transforms[direction]} opacity-0`
+            ? "opacity-100"
+            : "opacity-0"
         }
         ${className}
       `}
