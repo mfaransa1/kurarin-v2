@@ -15,6 +15,10 @@ const navLinks = [
     name: "About",
     href: "/about",
   },
+    {
+    name: "Pricing",
+    href: "/pricing",
+  },
   {
     name: "Journal",
     href: "/blog",
@@ -427,20 +431,7 @@ export default function Navbar() {
                 lg:flex
               "
             >
-              <Link
-                href="/contact"
-                className="
-                  text-[14px]
-                  font-medium
-                  text-[#425466]
-                  transition-colors
-                  duration-200
-                  hover:text-[#635BFF]
-                "
-              >
-                Contact
-              </Link>
-
+             
               <Link
                 href="/contact"
                 className="
